@@ -9,11 +9,24 @@ import sys
 
 # ClonalFrame.bin -x 1000000 -y 250000 -z 100
 
+# For this release I've only tested on windows and linux
+# Can add more easily by adding the platform that would be reported by
+# platform.system() into this list and then adding the cooresponding
+# directory under extlib and putting the ClonalFrame executable in that folder
+# The executable needs to be named ClonalFrame.bin(in the linux folder I simply
+#  symlinked ClonalFrame -> ClonalFrame.bin)
+KNOWN_PLATFORMS = ('windows','Linux')
+
 def binary( ):
-    ''' Return the path to the binary for this platform '''
+    '''
+        Return the path to the binary for this platform
+    '''
     import platform
-    binpath = join( 'extlib', 'bin' )
-    return join(binpath,platform.system())
+    system = platform.system()
+    if system not in KNOWN_PLATFORMS:
+        print 'I don\'t know what operating system you are using'
+        sys.exit( 1 )
+    return join( 'extlib', platform.system(), 'ClonalFrame.bin' )
 
 def run_clonalframe( infile, outfile, cframeargs, *args, **kwargs ):
     '''
@@ -24,7 +37,7 @@ def run_clonalframe( infile, outfile, cframeargs, *args, **kwargs ):
         @param cframeargs - Args to pass to clonal frame
     '''
     kwargs.update( {'infile':infile,'outfile':outfile} )
-    cframe = 'ClonalFrame.bin'
+    cframe = binary()
     args = shlex.split(cframeargs) + [infile,outfile]
     cmd = [cframe] + args
     logfile = outfile + '.log'
@@ -43,6 +56,13 @@ def main( args ):
     outdir = args.outputdir
     cframeargs = args.cframeargs
     iterations = args.iterations
+    if infiles:
+        make_outputdir( outdir )
+        run_parallel( infiles, outdir, iterations, cframeargs )
+    else:
+        print "No input files specified"
+
+def make_outputdir( outdir ):
     if not isdir( outdir ):
         try:
             os.makedirs( outdir )
@@ -50,7 +70,6 @@ def main( args ):
             print "Cannot create output directory {}".format(outdir)
             print e
             sys.exit( 1 )
-    run_parallel( infiles, outdir, iterations, cframeargs )
 
 def run_parallel( infiles, outdir, iterations, cframeargs ):
     p = multiprocessing.Pool()
@@ -79,7 +98,7 @@ def getoutfilenames( infile, outpath, iterations ):
         @param outpath - Output directory
         @param iterations - How many iterations there will be
     '''
-    fmt = infile + '.{}.out.dat'
+    fmt = basename(infile) + '.{}.out.dat'
     outpaths = [join(outpath,fmt.format(i)) for i in range(1,iterations+1)]
     return outpaths
 

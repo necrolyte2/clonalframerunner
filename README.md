@@ -1,9 +1,5 @@
-Open a command window
-Change directory to this directory
-
-
 Simple Example Run:
-python clonalframe.py --iterations 3 --args "-x 10 -y 10 -z 10"
+python cframe_runner --iterations 3 --args "-x 10 -y 10 -z 10"
 
 Notice how you have to put the arguments for ClonalFrame.bin itself inside of " " after the --args.
 You should be able to use any combination of clonal frame arguments inside of there.
@@ -13,4 +9,4 @@ You should be able to use any combination of clonal frame arguments inside of th
 !!!
 
 Try this to get some more usage/help information about how to use the script.
-python clonalframe.py --help
+python cframe_runner --help
