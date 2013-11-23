@@ -33,6 +33,11 @@ You may also need to add python to your path by doing something similar to:
 ```
 path C:\Python27
 ```
+To check if you have python in your path try the following
+```
+python -V
+```
+Which should output some version information about python
 
 ### Linux
 
