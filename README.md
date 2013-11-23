@@ -12,7 +12,9 @@ but instead runs each input file using a different cpu so that you can do many a
 ### Windows
 
 All you should have to do is download the latest Windows release from [ClonalFrame][1] and unzip the files into
-the extlib/Windows directory
+the extlib/Windows directory.
+All you really need is to have the ClonalFrame.bin file inside of the extlib/Windows directory, but you can just copy
+everything if you want.
 
 ### Linux
 
