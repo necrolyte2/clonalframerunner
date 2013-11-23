@@ -1,4 +1,3 @@
-
 # ClonalFrame Runner
 
 The purpose of this project is to simply make running ClonalFrame over multiple 
@@ -65,6 +64,10 @@ __!!! Don't put the inifile and outfile arguments for ClonalFrame inside of the 
 ```
 python cframe_runner --help
 ```
+
+## Known Issues
+
+https://github.com/necrolyte2/clonalframerunner/issues/1
 
 ## References
 
