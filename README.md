@@ -17,7 +17,9 @@ you want or you can clone the git repository
 git clone https://github.com/necrolyte2/clonalframerunner.git
 ```
 
-### Ensure Python is installed(version 2.7+)
+### Install Python
+
+Ensure Python is installed(version 2.7+)
 
 ### Windows
 
