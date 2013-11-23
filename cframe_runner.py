@@ -7,6 +7,8 @@ import shlex
 import argparse
 import sys
 
+THIS_DIR = dirname( abspath( __file__ ) )
+
 # ClonalFrame.bin -x 1000000 -y 250000 -z 100
 
 # For this release I've only tested on windows and linux
@@ -26,7 +28,7 @@ def binary( ):
     if system not in KNOWN_PLATFORMS:
         print 'I don\'t know what operating system you are using'
         sys.exit( 1 )
-    return join( 'extlib', platform.system(), 'ClonalFrame.bin' )
+    return join( THIS_DIR, 'extlib', platform.system(), 'ClonalFrame.bin' )
 
 def run_clonalframe( infile, outfile, cframeargs, *args, **kwargs ):
     '''
