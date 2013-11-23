@@ -19,7 +19,7 @@ git clone https://github.com/necrolyte2/clonalframerunner.git
 
 ### Install Python
 
-Ensure Python is installed(version 2.7+)
+Ensure Python is installed(version 2.7+) and in your path
 
 ### Windows
 
@@ -27,6 +27,12 @@ All you should have to do is download the latest Windows release from [ClonalFra
 the extlib/Windows directory.
 All you really need is to have the ClonalFrame.bin file inside of the extlib/Windows directory, but you can just copy
 everything if you want.
+
+You may have to create the extlib/Windows directory first
+You may also need to add python to your path by doing something similar to:
+```
+path C:\Python27
+```
 
 ### Linux
 
