@@ -9,10 +9,24 @@ but instead runs each input file using a different cpu so that you can do many a
 
 ## Installation
 
+### Install clonalframerunner
+
+You can download it directly from https://github.com/necrolyte2/clonalframerunner/archive/master.zip and unzip that wherever
+you want or you can clone the git repository
+```
+git clone https://github.com/necrolyte2/clonalframerunner.git
+```
+
+### Install Python
+
+Ensure Python is installed(version 2.7+)
+
 ### Windows
 
 All you should have to do is download the latest Windows release from [ClonalFrame][1] and unzip the files into
-the extlib/Windows directory
+the extlib/Windows directory.
+All you really need is to have the ClonalFrame.bin file inside of the extlib/Windows directory, but you can just copy
+everything if you want.
 
 ### Linux
 
@@ -35,7 +49,7 @@ contains the file libgsl.so.0
 ### Simplest invocation
 
 The following will execute ClonalFrame as if you had just run ClonalFrame without any arguments.
-The only difference is that crame_runner will automatically find all .dat files in the current directory
+The only difference is that cframe_runner will automatically find all .dat files in the current directory
 and run them for you.
 ```
 python cframe_runner
