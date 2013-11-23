@@ -49,10 +49,10 @@ contains the file libgsl.so.0
 ### Simplest invocation
 
 The following will execute ClonalFrame as if you had just run ClonalFrame without any arguments.
-The only difference is that cframe_runner will automatically find all .dat files in the current directory
+The only difference is that cframe_runner.py will automatically find all .dat files in the current directory
 and run them for you.
 ```
-python cframe_runner
+python cframe_runner.py
 ```
 
 ### Iterations
@@ -60,23 +60,23 @@ python cframe_runner
 Sometimes you might want to run all given input files with ClonalFrame multiple times.
 The following would run all found .dat files 3 times each creating a separate iteration output file for each iteration.
 ```
-python cframe_runner --iterations 3
+python cframe_runner.py --iterations 3
 ```
 
 ### Customize Arguments sent to ClonalFrame
 
 Most likey you will want to set the -x, -y and -z options for ClonalFrame. This is easy as well.
-You should be able to use any combination of clonal frame arguments by utilizing the --args option to cframe_runner
+You should be able to use any combination of clonal frame arguments by utilizing the --args option to cframe_runner.py
 
 ```
-python cframe_runner --args '-x 1000 -y 250 -z 10'
+python cframe_runner.py --args '-x 1000 -y 250 -z 10'
 ```
 __!!! Don't put the inifile and outfile arguments for ClonalFrame inside of the quotes after --args !!!__
 
 
-### Get more help about how to use cframe_runner
+### Get more help about how to use cframe_runner.py
 ```
-python cframe_runner --help
+python cframe_runner.py --help
 ```
 
 ## Known Issues

@@ -8,7 +8,6 @@ import argparse
 import sys
 
 # ClonalFrame.bin -x 1000000 -y 250000 -z 100
-THIS_DIR = dirname( abspath( __file__ ) )
 
 # For this release I've only tested on windows and linux
 # Can add more easily by adding the platform that would be reported by
@@ -16,7 +15,7 @@ THIS_DIR = dirname( abspath( __file__ ) )
 # directory under extlib and putting the ClonalFrame executable in that folder
 # The executable needs to be named ClonalFrame.bin(in the linux folder I simply
 #  symlinked ClonalFrame -> ClonalFrame.bin)
-KNOWN_PLATFORMS = ('windows','Linux')
+KNOWN_PLATFORMS = ('Windows','Linux')
 
 def binary( ):
     '''
@@ -27,7 +26,7 @@ def binary( ):
     if system not in KNOWN_PLATFORMS:
         print 'I don\'t know what operating system you are using'
         sys.exit( 1 )
-    return join( THIS_DIR, 'extlib', platform.system(), 'ClonalFrame.bin' )
+    return join( 'extlib', platform.system(), 'ClonalFrame.bin' )
 
 def run_clonalframe( infile, outfile, cframeargs, *args, **kwargs ):
     '''
