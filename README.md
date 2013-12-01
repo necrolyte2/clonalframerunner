@@ -97,7 +97,10 @@ python cframe_runner.py --help
 
 ## Known Issues
 
-https://github.com/necrolyte2/clonalframerunner/issues/1
+* [No Status Updates](https://github.com/necrolyte2/clonalframerunner/issues/1)
+* [Needs installer](https://github.com/necrolyte2/clonalframerunner/issues/2)
+
+Please [submit](https://github.com/necrolyte2/clonalframerunner/issues) any more issues that you find
 
 ## References
 
