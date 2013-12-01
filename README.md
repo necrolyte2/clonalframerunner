@@ -28,16 +28,17 @@ the extlib/Windows directory.
 All you really need is to have the ClonalFrame.bin file inside of the extlib/Windows directory, but you can just copy
 everything if you want.
 
-You may have to create the extlib/Windows directory first
+*  You may have to create the extlib/Windows directory first
+
+* To check if you have python in your path try the following
+```
+python -V
+```
+Which should output some version information about python. If it outputs something about not being able to find python or python not being a valid command you may need to add it to your path.
 You may also need to add python to your path by doing something similar to:
 ```
 path C:\Python27
 ```
-To check if you have python in your path try the following
-```
-python -V
-```
-Which should output some version information about python
 
 ### Linux
 
@@ -80,7 +81,7 @@ Most likey you will want to set the -x, -y and -z options for ClonalFrame. This 
 You should be able to use any combination of clonal frame arguments by utilizing the --args option to cframe_runner.py
 
 ```
-python cframe_runner.py --args '-x 1000 -y 250 -z 10'
+python cframe_runner.py --args "-x 1000 -y 250 -z 10"
 ```
 __!!! Don't put the inifile and outfile arguments for ClonalFrame inside of the quotes after --args !!!__
 
