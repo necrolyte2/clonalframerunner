@@ -5,7 +5,7 @@ input files and multiple iterations over each to be easier.
 This project is focused on allowing the user to easily utilize as many CPU's as 
 possible to run as many iterations and input files as you can.
 This project does not make ClonalFrame itself utilize more than one thread/cpu, 
-but instead runs each input file using a different cpu so that you can do many analysis all in parallel.
+but instead runs ClonalFrame on each input file using a different cpu so that you can do many analysis all in parallel.
 
 ## Installation
 
