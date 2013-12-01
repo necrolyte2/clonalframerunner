@@ -9,6 +9,10 @@ but instead runs each input file using a different cpu so that you can do many a
 
 ## Installation
 
+### Install Python
+
+Ensure Python is installed(version 2.7+) and in your path
+
 ### Install clonalframerunner
 
 You can download it directly from https://github.com/necrolyte2/clonalframerunner/archive/master.zip and unzip that wherever
@@ -16,10 +20,7 @@ you want or you can clone the git repository
 ```
 git clone https://github.com/necrolyte2/clonalframerunner.git
 ```
-
-### Install Python
-
-Ensure Python is installed(version 2.7+) and in your path
+Note the location that you install clonalframerunner as you will have to reference it's location later when you run the script.
 
 ### Windows
 
@@ -28,17 +29,7 @@ the extlib/Windows directory.
 All you really need is to have the ClonalFrame.bin file inside of the extlib/Windows directory, but you can just copy
 everything if you want.
 
-*  You may have to create the extlib/Windows directory first
-
-* To check if you have python in your path try the following
-```
-python -V
-```
-Which should output some version information about python. If it outputs something about not being able to find python or python not being a valid command you may need to add it to your path.
-You may also need to add python to your path by doing something similar to:
-```
-path C:\Python27
-```
+Check out [this link](http://docs.python.org/2/faq/windows.html#how-do-i-run-a-python-program-under-windows) regarding Python on windows.
 
 ### Linux
 
@@ -57,6 +48,19 @@ You may need to download/make/install the [GNU Scientific Library][2] manually o
 contains the file libgsl.so.0
 
 ## Examples
+
+All examples assume you are inside of the installed clonalframerunner directory. If you are trying to run cframe_runner.py from outside of the installation directory you will have to specify the full path to cframe_runner.py.
+Aka.
+
+Linux
+```
+python /path/to/cframe_runner.py --help
+```
+Windows
+```
+python C:\path\to\cframe_runner.py --help
+```
+There are plans to make it easier to run in the future so this will be unecessary.
 
 ### Simplest invocation
 
