@@ -47,6 +47,10 @@ RedHat
 You may need to download/make/install the [GNU Scientific Library][2] manually or possibly find an rpm package that 
 contains the file libgsl.so.0
 
+```
+yum install gsl gsl-devel gsl-static qt4 qt4-devel
+```
+
 ## Examples
 
 All examples assume you are inside of the installed clonalframerunner directory. If you are trying to run cframe_runner.py from outside of the installation directory you will have to specify the full path to cframe_runner.py.
